@@ -52,12 +52,12 @@ fn verification_method() -> VerificationMethod {
 
 pub fn temporary_password_length() -> usize {
     let length = Config::get_option("temporary-password-length");
-    if length == "8" {
-        8
+    if length == "6" {
+        6
     } else if length == "10" {
         10
     } else {
-        6 // default
+        8 // RCS default (upstream was 6)
     }
 }
 
